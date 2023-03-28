@@ -1,0 +1,138 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    
+  
+      <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+      <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+      <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  
+  
+  
+    
+    <title>Love</title>    
+  <style>
+  body {
+    text-align: center;
+    padding: 10px 50px;
+    background: #0D1A29;
+    font-family: "Helvetica Neue", "Open Sans", helvetica, arial, sans-serif;
+  }
+  .picture{
+      width: 550px;
+      margin: 3em auto;
+  }
+
+  .header{
+    text-align: center;
+    font-size: 2em;
+    padding: 0 0 15px 0;
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 0 0 20px #48C8FF;
+    background: #0D1A29;
+    font-family: "Helvetica Neue", "Open Sans", helvetica, arial, sans-serif;
+  }
+
+  .foto img{
+    height: auto;
+    width: 100%;
+  }
+  /*#timer_parents{
+    text-align: center;
+    padding: 70px 50px;
+    background: #0D1A29;
+    font-family: "Helvetica Neue", "Open Sans", helvetica, arial, sans-serif;
+  }
+  */
+  #timer {
+    font-size: 3em;
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 0 0 20px #48C8FF;
+  }
+  #timer div {
+    display: inline-block;
+    min-width: 90px;
+  }
+  #timer div span {
+    color: #B1CDF1;
+    display: block;
+    font-size: 0.45em;
+    font-weight: 400;
+  }
+  #since {
+    color: #B1CDF1;
+    display: block;
+    font-size: 0.45em;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px #48C8FF;
+  }
+
+.header span{
+    color: red;
+    text-shadow: none;
+}
+
+  </style>
+  
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+  </head>
+  
+  <body translate="no">
+      <div class="header">
+        <p>LOVED YOU FOR... AND NEVER GOING TO STOP <span>&#10084;</span></p>
+        </select>
+      </div>
+
+    <div id="timer"></div>
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+        <script id="rendered-js">
+  function updateTimer() {
+    // yyyy-MM-dd HH:mm:ss
+    past = Date.parse("2021-08-08 00:00:00");
+    now = new Date();
+    diff = now - past;
+  
+    years = Math.floor(diff / (1000 * 60 * 60 * 24 * 30 * 12));
+    months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
+    days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    hours = Math.floor(diff / (1000 * 60 * 60));
+    mins = Math.floor(diff / (1000 * 60));
+    secs = Math.floor(diff / 1000);
+  
+    y = years;
+    M = months - years * 12;
+    d = days - months * 30;
+    h = hours - days * 24;
+    m = mins - hours * 60;
+    s = secs - mins * 60;
+    document.getElementById("timer").
+    innerHTML =
+    '<div>' + y + '<span>year</span></div>' +
+    '<div>' + M + '<span>months</span></div>' +
+    '<div>' + d + '<span>days</span></div>' +
+    '<div>' + h + '<span>hours</span></div>' +
+    '<div>' + m + '<span>minutes</span></div>' +
+    '<div>' + s + '<span>seconds</span></div>';
+  }
+  setInterval('updateTimer()', 1000);
+  //# sourceURL=pen.js
+      </script>
+  
+  <div class="picture">
+      <div class="foto">
+        <img src="./IMG-20210823-WA0002.jpg" alt="">
+      </div>
+  </div>
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/78Sw5GDo6AlGwTwanjXbGh?utm_source=generator&theme=0" width="50%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </body></html>
